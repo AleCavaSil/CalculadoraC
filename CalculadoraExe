@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int n;
+    int p, q;
+    printf("MENU: Escolha uma das opcoes a seguir: ");
+    printf("\n 1. ~p");
+    printf("\n 2. p ^ q");
+    printf("\n 3. p v q");
+    printf("\n 4. SAIR");
+    printf("\n Escreva o numero da opcao desejada: ");
+    scanf("%d", &n);
+    switch (n)
+    {
+    case 1:
+        printf("\n Digite 0 para falso ou 1 para verdadeiro: ");
+        scanf("%d", &p);
+        if (p == 0) {
+            printf("\n O valor logico de ~p eh = VERDADEIRO.");
+        } else {
+            printf("\n O valor logico de ~p eh = FALSO.");
+        }
+        break;
+
+    case 2:
+        printf("\n Digite 0 para falso ou 1 para verdadeiro - p: ");
+        scanf("%d", &p);
+        printf("\n Digite 0 para falso ou 1 para verdadeiro - q: ");
+        scanf("%d", &q);
+        if ((p==1)&&(q==1)){
+            printf("\n O valor logico de p ^ q  eh = VERDADEIRO.");
+        } else {
+            printf("\n O valor logico de p ^ q  eh = FALSO.");
+        }
+        break;
+
+    case 3:
+        printf("\n Digite 0 para falso ou 1 para verdadeiro - p: ");
+        scanf("%d", &p);
+        printf("\n Digite 0 para falso ou 1 para verdadeiro - q: ");
+        scanf("%d", &q);
+        if ((p==0)&&(q==0)){
+            printf("\n O valor logico de p v q  eh = FALSO.");
+        } else {
+            printf("\n O valor logico de p v q  eh = VERDADEIRO.");
+        }
+        break;
+
+    case 4:
+        printf("Saindo do programa....");
+        break;
+    }
+    return(0);
+}
